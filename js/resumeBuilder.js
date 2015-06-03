@@ -15,8 +15,9 @@ var bio = {
 		"email" : "firstdiem@gmail.com",
 		"github" : "justjones",
 		"twitter" : "@justjonesweb",
-		"location" : "Chattanooga"
+		"location" : "Chattanooga TN"
 	},
+
 	"welcomeMessage" : "Hello, I am a Web Developer from Chattanooga, TN",
 	"skills" : ["Javascript", "CSS", "HTML", "Graphic Design", "jQuery"],
 	"bioPic" : "images/me.jpg"
@@ -44,10 +45,11 @@ function displayBio(){
 	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 	$("#topContacts").append(formattedLocation);
 
-	var formattedPicture = HTMLbioPic.replace("%data%", bio.bioPic);
-	/*var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);*/
+	var formattedPicture = HTMLbioPic.replace("%data%", bio.bioPic);	
 		$("#header").append(formattedPicture);
-		/*$("#header").append(formattedWelcomeMsg);*/
+
+	/*var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+		$("#header").append(formattedwelcomeMsg);*/
 
 		$("#footerContacts").append(formattedMobile);
 		$("#footerContacts").append(formattedEmail);
@@ -66,8 +68,6 @@ function displayBio(){
 }
 
 displayBio();
-
-
 
 var education = {
 	"schools" : [
@@ -174,8 +174,6 @@ var projects = {
 	]
 }
 
-
-
 /*function locationizer(work_obj){
 	var locationArray = [];
 
@@ -195,4 +193,3 @@ var charEscape = function(_html){
 
 	return newHTML;
 };
-$("#mapDiv").append(googleMap);
